@@ -1,0 +1,236 @@
+/* --- Variables --- */
+:root {
+    --color-text-main: #1a1a1a;
+    --color-btn-location: #c49a62; /* Tono dorado/mostaza */
+    --color-btn-confirm: #7c4832; /* Tono café oscuro */
+    --color-bg: #fdfdfd;
+    
+    --font-titles: 'Playfair Display', serif;
+    --font-text: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tipografias */
+@font-face {
+  font-family: 'NovaQuinta'; 
+  src: url('fonts/NovaQuinta.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Raillouise';
+  src: url('fonts/Raillouise.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Baskervville';
+  src: url('fonts/Baskerville-old-face.ttf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+    background-color: #2c2c2c; 
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-text);
+    color: var(--color-text-main);
+}
+
+/* --- Contenedor Principal --- */
+.invitation-wrapper {
+    background-color: var(--color-bg);
+    width: 100%;
+    max-width: 450px; 
+    min-height: 100vh;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Imágenes de Cabecera y Pie --- */
+.header-image #rosebush, 
+.footer-image #charra {
+    display: block;
+}
+
+#rosebush {
+    width: 100%;
+    height: auto;
+}
+
+/* Herradura */
+.horseshoe {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 130px;
+}
+
+#charra {
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    height: auto;
+    right: 0;
+}
+
+#rope {
+    position: absolute;
+    bottom: -20px;
+    width: 100%;
+    height: 50px;
+}
+
+
+/* --- Contenido Central --- */
+.invitation-content {
+    padding: 0px 10px;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Nombre */
+.quinceanera-name {
+    font-family: 'NovaQuinta', cursive;
+    font-size: 4rem;
+    font-weight: 400;
+    margin-top: -180px;
+}
+.quinceanera-lastname {
+    font-family: 'NovaQuinta', cursive;
+    font-size: 3rem;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+/* Sección Padres */
+.parents-section p {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.parents-names {
+    font-size: 32px !important;
+    font-weight: 500 !important;
+    font-family: 'Raillouise';
+    margin: 5px 0;
+}
+
+/* --- Sección Fecha --- */
+.date-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px 0;
+
+    font-family: 'Baskervville', serif;
+}
+
+.date-text {
+    border-top: 1px solid var(--color-text-main);
+    border-bottom: 1px solid var(--color-text-main);
+    padding: 5px 0;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.date-number {
+    font-size: 3.5rem;
+    line-height: 1;
+
+    font-family: 'Baskervville', cursive;
+}
+
+/* --- Detalles (Ceremonia y Recepción) --- */
+.details-section {
+    position: relative;
+    width: 100%;
+    padding: 20px 0;
+
+    background-image: url('img/Caballo.png'); 
+    background-size: 350px; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+.event-block {
+    position: relative;
+    z-index: 1; 
+    margin-bottom: 30px;
+}
+
+.event-block h2 {
+    font-family: 'Raillouise';
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.event-block p {
+    font-size: 1rem;
+    margin-bottom: 2px;
+}
+
+.address-details {
+    font-size: 0.9rem;
+}
+
+/* --- Sección RSVP --- */
+.rsvp-section {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 100px;
+}
+
+.rsvp-section h2 {
+    font-family: 'Raillouise';
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.rsvp-section p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* --- Botones --- */
+.btn {
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    font-family: var(--font-text);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+.btn-location {
+    background-color: var(--color-btn-location);
+}
+
+.btn-confirm {
+    background-color: var(--color-btn-confirm);
+    padding: 12px 40px;
+    font-size: 1rem;
+}
